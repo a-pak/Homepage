@@ -1,0 +1,69 @@
+/* Hero-kuva */
+#hero {
+    height: 100vh;
+    background: url("/static/images/sunset-in-greece-mountains.jpg") no-repeat center center/cover;
+    position: relative;
+}
+
+#hero::after {
+    content: "";
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30px;
+    height: 30px;
+    border-bottom: 2px solid white;
+    border-right: 2px solid white;
+    transform: translateX(-50%) rotate(45deg);
+}
+
+#navbar {
+  background: transparent;
+  transition: background 0.3s ease;
+}
+
+section {
+  scroll-margin-top: 40px;
+}
+
+
+/* hover effect on project cards */
+.project-card {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+.project-card img {
+  width: 100%;
+  height: auto;
+  transition: opacity 0.4s ease;
+}
+
+.project-card .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(43, 78, 92, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  text-align: center;
+  padding: 10px;
+}
+
+.project-card:hover img {
+  opacity: 0.3;
+}
+
+.project-card:hover .overlay {
+  opacity: 1;
+}
