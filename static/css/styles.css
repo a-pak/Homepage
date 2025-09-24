@@ -40,7 +40,9 @@ section {
 
 .project-card img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 1 / 1;  /* pakottaa neliön */
+  object-fit: cover;
+  border-radius: 10px;
   transition: opacity 0.4s ease;
 }
 
@@ -58,6 +60,7 @@ section {
   transition: opacity 0.4s ease;
   text-align: center;
   padding: 10px;
+  
 }
 
 .project-card:hover img {
