@@ -1,12 +1,19 @@
 version: "3.8"
 
 services:
-  web:
+  homepage:
     build: .
-    container_name: homepage
+    container_name: homepage-app
     ports:
-      - "8000:8000"
+      - "8001:8000"   # host:container
     env_file:
       - .env
     volumes:
       - .:/app
+    restart: unless-stopped
+    networks:
+      - homepage-network
+
+networks:
+  homepage-network:
+    driver: bridge
