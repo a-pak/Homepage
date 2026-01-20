@@ -27,6 +27,10 @@ app.mount("/static", StaticFiles(directory="static"), name="static")
 def read_index():
     return FileResponse("static/index.html")
 
+@app.get("/homeserver")
+def get_homeserver():
+    return FileResponse("static/homeserver.html")
+
 @app.get("/test")
 async def root():
     return {"message": "Hello world"}

@@ -7,3 +7,4 @@ document.addEventListener("scroll", () => {
         navbar.classList.remove("bg-dark");
     }
 });
+
